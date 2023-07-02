@@ -13,6 +13,7 @@ const TutorialsPage = () => {
         {/* <li><NavLink to={'/tutorials/react-components'}>React Component</NavLink></li> */}
         <li><NavLink to={'/tutorials'} end>Welcome</NavLink></li>
         <li><NavLink to={'react-components'}>React Component</NavLink></li>
+        <li><NavLink to={'/tutorials/state-in-cc'}>State in class component</NavLink></li>
         </ul>
       </aside>
       <div className={styles['content']}>

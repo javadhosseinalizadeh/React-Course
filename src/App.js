@@ -7,6 +7,7 @@ import { AboutPage } from './pages/about'
 import { NotFoundPage } from './pages/not-found'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
+import { StateInCc } from './tutorials/state-in-cc'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path='tutorials' element={<TutorialsPage />} >
               <Route index element={<WelcomePage />} />
               <Route path='react-components' element={<ReactComponent />} />
+              <Route path='state-in-cc' element={<StateInCc />} />
             </Route>
             <Route path='about' element={<AboutPage />} />
             <Route path='*' element={<NotFoundPage />} />
