@@ -8,7 +8,7 @@ import { NotFoundPage } from './pages/not-found'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { StateInCc } from './tutorials/state-in-cc'
-
+import { UsersPage } from './pages/users'
 
 function App() {
   return (
@@ -23,6 +23,9 @@ function App() {
               <Route path='state-in-cc' element={<StateInCc />} />
             </Route>
             <Route path='about' element={<AboutPage />} />
+            <Route path='users' element={<UsersPage />} />
+
+
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
         </MainLayout>

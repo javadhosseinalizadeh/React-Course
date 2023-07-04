@@ -10,13 +10,14 @@ export default class StateInCc extends Component {
 
         this.state = {
             display: 'block',
-            isVisible : false
+            isVisible: false,
+            message: 'Sample message'
         }
     }
-    
+
     isVisible = true
-    
-    onClickHandlerNormal () {
+
+    onClickHandlerNormal() {
 
         console.log('test');
         console.log(this.isVisible);
@@ -25,9 +26,9 @@ export default class StateInCc extends Component {
     onClickHandlerArrow = () => {
 
         console.log(this);
-        
+
     }
-    
+
     onToggleShowHandler = () => {
         this.visible = !this.isVisible
         this.forceUpdate()
@@ -42,25 +43,32 @@ export default class StateInCc extends Component {
     }
 
     onToggleVisibleHandler = () => {
-        this.setState({isVisible: !this.state.isVisible})
+        this.setState({ isVisible: !this.state.isVisible })
     }
-  render() {
-    return (
-      <div >
-        <button onClick={this.onClickHandlerNormal}>Test event normal</button>
-        <button onClick={this.onClickHandlerArrow}>Test event arrow</button>
-        <hr />
-        <button onClick={this.onToggleShowHandler}>Toggle show (forceUpdate) </button>
-       
-        <button onClick={this.onToggleDisplayHandler}>Toggle show (state display) </button>
-        <button onClick={this.onToggleVisibleHandler}>Toggle show (state isVisible) </button>
-        <div style={{display: !this.isVisible ? 'none' : null}}>
-            <div style={{display: this.state.display}}>
-            {this.state.isVisible ? <Sample /> : null}
-            
+    render() {
+        return (
+            <div >
+                <button onClick={this.onClickHandlerNormal}>Test event normal</button>
+                <button onClick={this.onClickHandlerArrow}>Test event arrow</button>
+                <hr />
+                <button onClick={this.onToggleShowHandler}>Toggle show (forceUpdate) </button>
+
+                <button onClick={this.onToggleDisplayHandler}>Toggle show (state display) </button>
+                <button onClick={this.onToggleVisibleHandler}>Toggle show (state isVisible) </button>
+                
+                <hr />
+
+                <button onClick={()=> {
+                    this.setState({message:this.state.message + ', Added new message'})
+                }}>Add message </button>
+                <div style={{ display: !this.isVisible ? 'none' : null }}>
+                    <div style={{ display: this.state.display }}>
+                        {/* {this.state.isVisible ? <Sample /> : null} */}
+                        {this.state.isVisible && <Sample message={this.state.message} />}
+
+                    </div>
+                </div>
             </div>
-       </div> 
-      </div>
-    )
-  }
+        )
+    }
 }
