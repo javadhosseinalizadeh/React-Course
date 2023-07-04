@@ -17,4 +17,9 @@ nav ul a {
 
 nav ul a:hover {
     background-color: rgb(97, 97, 158);
+    color: aqua;
+}
+
+nav ul a.active {
+    text-decoration: underline;
 }

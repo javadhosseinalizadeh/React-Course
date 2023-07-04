@@ -1,0 +1,29 @@
+.tutorials-page {
+display: flex;
+padding: 1em;
+}
+.tutorials-page aside {
+    flex-basis: 40%;
+}
+.tutorials-page aside ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tutorials-page aside ul a {
+    display: block;
+    color: #204568;
+    text-decoration: none;
+    padding: 0.5em;
+}
+.tutorials-page aside ul a:hover {
+    background-color: #f1f1f1;
+}
+.tutorials-page aside ul :global .active {
+    background-color: #f1f1f1;
+}
+.tutorials-page section .content {
+    flex-grow: 1;
+    padding: 0.5em;
+
+}

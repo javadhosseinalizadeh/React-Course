@@ -1,0 +1,12 @@
+.not-found {
+    min-height: 70wh;
+    text-align: center;
+}
+.not-found img {
+    display: block;
+    width: 100%;
+}
+.not-found a {
+    font-weight: 900;
+    color: orangered;
+}
