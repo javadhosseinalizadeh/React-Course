@@ -1,0 +1,23 @@
+.grid {
+    border: 1px solid #f1f1f1;
+    box-shadow: 0 4px 4px -2px #555;
+    
+}
+.grid-row {
+    display: flex;
+}
+.grid-striped:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+.grid-hover:hover {
+    background-color: #ccc;
+}
+.grid-header .grid-column {
+    padding: .5em 1em;
+    background-color: #555;
+    color: white;
+}
+.grid-body .grid-column {
+    padding: .5em ;
+   color: black;
+}

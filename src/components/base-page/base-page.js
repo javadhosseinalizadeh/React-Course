@@ -9,9 +9,9 @@ const BasePage = ({title,description='this is a case study for react', children}
         <meta description='description' content={description} />
     </Helmet>
         <h2 className={styles['title']}>
-            <span>{title}</span>
-            {children}
+            <span>{title}</span>            
         </h2>
+        {children}
     </>
   )
 }
