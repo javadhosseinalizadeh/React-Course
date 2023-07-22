@@ -9,6 +9,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { StateInCc } from './tutorials/state-in-cc'
 import { UsersPage } from './pages/users'
+import { StateInFc } from './tutorials/state-in-fc'
+import { ProductEditPage, ProductNewPage, ProductsPage } from './pages/product'
 
 function App() {
   return (
@@ -16,11 +18,15 @@ function App() {
       <BrowserRouter>
         <MainLayout>
           <Routes>
-            <Route path='/' element={<HomePage />} />
+            <Route path='/' element={<HomePage /> } />
+            <Route path='/products' element={<ProductsPage />} />
+            <Route path='/products/new' element={<ProductNewPage />} />
+            <Route path='/products/edit' element={<ProductEditPage />} />
             <Route path='tutorials' element={<TutorialsPage />} >
               <Route index element={<WelcomePage />} />
               <Route path='react-components' element={<ReactComponent />} />
               <Route path='state-in-cc' element={<StateInCc />} />
+              <Route path='state-in-fc' element={<StateInFc />} />
             </Route>
             <Route path='about' element={<AboutPage />} />
             <Route path='users' element={<UsersPage />} />

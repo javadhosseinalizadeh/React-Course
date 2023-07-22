@@ -1,0 +1,17 @@
+.add-new-panel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .5em;
+}
+.add-new-panel a {
+    color: black;
+    display: block;
+    font-size: 24px;
+    background-color: #f1f1f1;
+    padding: 6px 8px;
+
+}
+.add-new-panel a:hover {
+    background-color: #ccc;
+}

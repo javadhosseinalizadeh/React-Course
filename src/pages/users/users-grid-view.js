@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Grid from './grid/grid'
-import GridHeader from './grid/grid-header'
-import GridBody from './grid/grid-body'
+import Grid from '../../components/grid/grid'
+import GridHeader from '../../components/grid/grid-header'
+import GridBody from '../../components/grid/grid-body'
 
 export default class UsersGridView extends Component {
     gridColumns = [
@@ -14,7 +14,7 @@ export default class UsersGridView extends Component {
     return (
       <Grid >
         <GridHeader columns={this.gridColumns}/>
-        <GridBody dataList = {this.props.users} columns={this.gridColumns}/>
+        <GridBody dataList = {this.props.users} columns={this.gridColumns} striped hover/>
       </Grid>
     )
   }

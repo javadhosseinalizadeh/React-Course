@@ -1,0 +1,1 @@
+export { default as StateInFc} from './state-in-fc'
